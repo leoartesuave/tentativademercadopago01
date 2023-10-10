@@ -1,0 +1,45 @@
+<ion-header [translucent]="true">
+  <ion-toolbar mode="ios" color="dark">
+    <ion-title>
+      Mercado Pago
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  
+  <form id="form-checkout" action="/process_payment" method="post">
+    <div>
+      <div>
+        <ion-label for="payerFirstName">Nome</ion-label>
+        <input id="form-checkout__payerFirstName" name="payerFirstName" type="text">
+      </div>
+      <div>
+        <ion-label for="payerLastName">Sobrenome</ion-label>
+        <ion-input id="form-checkout__payerLastName" name="payerLastName" type="text">
+      </div>
+      <div>
+        <ion-label for="email">E-mail</ion-label>
+        <ion-input id="form-checkout__email" name="email" type="text">
+      </div>
+      <div>
+        <ion-label for="identificationType">Tipo de documento</ion-label>
+        <select id="form-checkout__identificationType" name="identificationType" type="text"></select>
+      </div>
+      <div>
+        <ion-label for="identificationNumber">Número do documento</ion-label>
+        <ion-input id="form-checkout__identificationNumber" name="identificationNumber" type="text">
+      </div>
+    </div>
+
+    <div>
+      <div>
+        <ion-input type="hidden" name="transactionAmount" id="transactionAmount" value="100">
+        <ion-input type="hidden" name="description" id="description" value="Nome do Produto">
+        <br>
+        <ion-button type="submit">Pagar</ion-button>
+      </div>
+    </div>
+  </form>
+
+</ion-content>
